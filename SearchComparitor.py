@@ -29,7 +29,7 @@ size = st.slider("Input Size", 100, 100000, 1000)
 target = st.number_input("Enter number to search", min_value=0, max_value=size-1, value=0)
 
 if st.button("Compare Algorithms"):
-    arr = list(range(size))  # already sorted
+    arr = list(range(size))  
 
     # Linear Search
     start = time.time()
@@ -40,3 +40,8 @@ if st.button("Compare Algorithms"):
     start = time.time()
     binary_result = binary_search(arr, target)
     binary_time = time.time() - start
+
+    # Displaying Results
+    st.subheader("Time Comparison")
+    st.write(f"Linear Search Time: {linear_time:.8f} seconds")
+    st.write(f"Binary Search Time: {binary_time:.8f} seconds")
