@@ -24,3 +24,6 @@ def binary_search(arr, key):
 
 
 st.title("Algorithm Comparator")
+
+size = st.slider("Input Size", 100, 100000, 1000)
+target = st.number_input("Enter number to search", min_value=0, max_value=size-1, value=0)
